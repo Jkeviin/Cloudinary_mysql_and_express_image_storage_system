@@ -7,12 +7,14 @@ import { ImagenesService } from './imagenes.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+
   imagenes: any[];
   images?: FileList;
   selectedImage?: File;
 
   constructor(private imagenesService: ImagenesService) {
     this.imagenes = [];
+    this.obtenerImagenes();
   }
 
   ImagenesSeleccionadas(event: any) {

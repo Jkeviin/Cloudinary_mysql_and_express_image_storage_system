@@ -1,14 +1,30 @@
-<div style="text-align: center">
-  <h1>UNA IMAGEN</h1>
-  <input type="file" (change)="ImagenSeleccionada($event)" />
-  <button (click)="enviarUnaImagen()">Subir imagen</button>
+<div class="main">
+  <div class="container">
+  <div class="upload-image">
+    <h1>Subir una imagen</h1>
+    <div class="upload-section">
+      <input type="file" (change)="ImagenSeleccionada($event)" />
+      <button class="btn" (click)="enviarUnaImagen()">Subir imagen</button>
+    </div>
+  </div>
+  <div class="upload-multiple-images">
+    <h1>Subir múltiples imágenes</h1>
+    <div class="upload-section">
+      <input type="file" (change)="ImagenesSeleccionadas($event)" multiple id="inputImagenes"/>
+      <button class="btn" (click)="enviarMuchasImagenes()">
+        Subir imágenes
+      </button>
+    </div>
+  </div>
+</div>
 
-  <h1>Subir múltiples imágenes</h1>
-  <input type="file" (change)="ImagenesSeleccionadas($event)" multiple />
-  <button (click)="enviarMuchasImagenes()">Subir imágenes</button>
+<div class="container2">
+  <h2>Imágenes:</h2>
+  <button class="btn" (click)="obtenerImagenes()">Mostrar imágenes</button>
+  <div class="image-gallery">
+    <div *ngFor="let imagen of imagenes">
+      <img src="{{ imagen.url }}" alt="" />
+    </div>
+  </div>
 </div>
-<h1>MOSTRAR IMAGENES</h1>
-<div *ngFor="let imagen of imagenes">
-  <img src="{{ imagen.url }}" alt="" style="width: 100px; height: 100px" />
 </div>
-<button (click)="obtenerImagenes()">imagen</button>
