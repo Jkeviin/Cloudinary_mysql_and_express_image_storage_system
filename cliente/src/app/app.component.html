@@ -1,0 +1,14 @@
+<div style="text-align: center">
+  <h1>UNA IMAGEN</h1>
+  <input type="file" (change)="ImagenSeleccionada($event)" />
+  <button (click)="enviarUnaImagen()">Subir imagen</button>
+
+  <h1>Subir múltiples imágenes</h1>
+  <input type="file" (change)="ImagenesSeleccionadas($event)" multiple />
+  <button (click)="enviarMuchasImagenes()">Subir imágenes</button>
+</div>
+<h1>MOSTRAR IMAGENES</h1>
+<div *ngFor="let imagen of imagenes">
+  <img src="{{ imagen.url }}" alt="" style="width: 100px; height: 100px" />
+</div>
+<button (click)="obtenerImagenes()">imagen</button>
