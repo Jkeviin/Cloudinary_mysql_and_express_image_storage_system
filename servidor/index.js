@@ -32,7 +32,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'lavasoft'
+  database: 'lavasoft2'
 });
 
 // Conexión a la base de datos

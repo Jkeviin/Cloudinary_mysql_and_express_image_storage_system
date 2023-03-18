@@ -30,8 +30,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/perfect-scrollbar/css/perfect-scrollbar.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
